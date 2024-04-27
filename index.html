@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blockly Project</title>
+  <!-- Link to your CSS file -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Blockly Project</h1>
+    </header>
+    <div class="content">
+      <div id="blocklyDiv"></div>
+      <!-- Add buttons for save and load -->
+      <button id="saveButton">Save</button>
+      <input type="file" id="loadButton" accept=".xml" onchange="loadConfigurations(event)">
+      <button id="convertToPythonButton">Convert to Python</button>
+      <textarea id="pythonCode" rows="10" cols="50" readonly></textarea>
+    </div>
+  </div>
+
+  <!-- Load Blockly -->
+  <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+  <script src="https://unpkg.com/blockly/blocks_compressed.js"></script>
+  <script src="https://unpkg.com/blockly/javascript_compressed.js"></script>
+  <script src="https://unpkg.com/blockly/python_compressed.js"></script> <!-- Include Blockly Python generator -->
+  <!-- Load your custom Blockly blocks -->
+  <script src="your_custom_blocks.js"></script>
+  <!-- Your JavaScript code -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/file-saver"></script>
+</body>
+</html>
